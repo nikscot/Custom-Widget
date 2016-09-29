@@ -146,7 +146,7 @@ public class CustomWidget extends JPanel implements MouseListener {
 	
 	public boolean isHexagon() { return hexagon; }
 	public boolean isOctagon() { return octagon; }
-
+	public boolean isSelected(){return hexagon || octagon;}
 
 
 	public static void main(String[] args) {
