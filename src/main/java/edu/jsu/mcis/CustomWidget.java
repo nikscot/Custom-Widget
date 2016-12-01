@@ -103,7 +103,8 @@ public class CustomWidget extends JPanel implements MouseListener {
             graph2d.setColor(DEFAULT_COLOR);
             graph2d.fill(shape[1]);       
         
-    }
+    	}
+    }	    
 
     public void mouseClicked(MouseEvent event) {
         if(shape[0].contains(event.getX(), event.getY())) {
