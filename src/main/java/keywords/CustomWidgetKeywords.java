@@ -22,9 +22,7 @@ public class CustomWidgetKeywords {
         ComponentChooser chooser = new CustomWidgetChooser();
         JComponentOperator operator = new JComponentOperator(context, chooser);
         operator.clickMouse(x, y, 1);
-        // could also do this when needed (I think this works)
-        // CustomWidget w = (CustomWidget)operator.getSource();
-        // w.whatever();
+        
     }
     
     @RobotKeyword("Clicks inside the shape of the custom widget.\n")
@@ -34,7 +32,7 @@ public class CustomWidgetKeywords {
         ComponentChooser chooser = new CustomWidgetChooser();
         JComponentOperator operator = new JComponentOperator(context, chooser);
         CustomWidget w = (CustomWidget)operator.getSource();
-        Rectangle bounds = w.getShape().getBounds();
+        Rectangle bounds = w.getShapes().getBounds();
         operator.clickMouse(bounds.x + bounds.width/2, bounds.y + bounds.height/2, 1);
     }
     
@@ -45,7 +43,7 @@ public class CustomWidgetKeywords {
         ComponentChooser chooser = new CustomWidgetChooser();
         JComponentOperator operator = new JComponentOperator(context, chooser);
         CustomWidget w = (CustomWidget)operator.getSource();
-        Rectangle bounds = w.getShape().getBounds();
+        Rectangle bounds = w.getShapes().getBounds();
         operator.clickMouse(bounds.x - 10, bounds.y - 10, 1);
     }
         
